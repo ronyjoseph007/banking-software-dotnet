@@ -1,0 +1,11 @@
+C:\Users\Administrator\source\repos\bamking application\bamking application\bin\Debug\bamking application.exe.config
+C:\Users\Administrator\source\repos\bamking application\bamking application\bin\Debug\bamking application.exe
+C:\Users\Administrator\source\repos\bamking application\bamking application\bin\Debug\bamking application.pdb
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking_application.Form1.resources
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking_application.Properties.Resources.resources
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.exe
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.pdb
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking_application.Form2.resources
