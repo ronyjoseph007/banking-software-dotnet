@@ -45,6 +45,7 @@ namespace bamking_application
         {
 
         }
+
         //confirm
         private void button8_Click(object sender, EventArgs e)
         {
@@ -73,6 +74,7 @@ namespace bamking_application
 
             }
         }
+
         //continue
         private void button7_Click(object sender, EventArgs e)
         {
@@ -95,6 +97,8 @@ namespace bamking_application
             }
 
         }
+
+
         //balance
         private void button1_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,8 @@ namespace bamking_application
         {
 
         }
+
+
         //withdraw
         private void button2_Click(object sender, EventArgs e)
         {
@@ -126,6 +132,8 @@ namespace bamking_application
         {
 
         }
+
+
         //deposit
         private void button3_Click(object sender, EventArgs e)
         {
@@ -133,6 +141,8 @@ namespace bamking_application
             panel4.Visible = false;
             panel6.Visible = true;
         }
+
+
         //continue_deposit
         private void button9_Click(object sender, EventArgs e)
         {
@@ -175,6 +185,8 @@ namespace bamking_application
             int b = 2000 * a;
             textBox9.Text = b.ToString();
         }
+
+
         //confirm_deposit
         private void button10_Click(object sender, EventArgs e)
         {
@@ -203,7 +215,161 @@ namespace bamking_application
             }
             else
             {
-                MessageBox.Show("Ceck the denominator");
+                MessageBox.Show("Check the denominator");
+            }
+        }
+        //logout
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Hide();
+            form1.Show();
+           
+
+        }
+        //transfer_fund
+        private void button13_Click(object sender, EventArgs e)
+        {
+            panel11.Visible = true;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from benificiary where accnum='"+accno+"'",con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            comboBox1.DataSource = dt;
+            comboBox1.DisplayMember = "benificiary_accnum";
+            con.Close();
+
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        //transfer
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel8.Visible = true;
+            panel6.Visible = false;
+            panel4.Visible = false;
+            panel3.Visible = false;
+        }
+        // add_benificiary
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = true;
+        }
+        //view_benificiary
+        private void button12_Click(object sender, EventArgs e)
+        {
+            panel10.Visible = true;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from benificiary",con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                dataGridView1.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("No benificiary added");
+            }
+            con.Close();
+
+
+        }
+        //add_ben
+        private void button14_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into benificiary values('"+accno+"','"+textBox10.Text+"','"+textBox11.Text+"','"+textBox12.Text+"')",con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Benificiary added successfully");
+        }
+        //transfer_confirm
+        private void button15_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from accdetails where accnum='"+accno+"'",con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                int bal = int.Parse(dr.GetValue(3).ToString());
+                int trans_amt = int.Parse(textBox15.Text);
+
+                if (trans_amt < bal)
+                {
+                    int updat_bal = bal - trans_amt;
+                    con.Close();
+                    con.Open();
+                    SqlCommand cmd1 = new SqlCommand(" update accdetails set balance='"+updat_bal+"' where accnum='"+accno+"'",con);
+                    cmd1.ExecuteNonQuery();
+                    con.Close();
+                    con.Open();
+                    SqlCommand cmd2 = new SqlCommand("select * from accdetails where accnum='"+comboBox1.Text+"'",con);
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+                    if (dr2.Read())
+                    {
+                        int bal1 = int.Parse(dr2.GetValue(3).ToString());
+                        int update_bal1 = bal1 + trans_amt;
+                        con.Close();
+                        con.Open();
+                        SqlCommand cmd3 = new SqlCommand("update accdetails set balance ='"+update_bal1+"' where accnum='"+comboBox1.Text+"'",con);
+                        cmd3.ExecuteNonQuery();
+                        MessageBox.Show("Amount successfully transfered");
+                        con.Close();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("insufficient balance");
+                }
             }
         }
     }
