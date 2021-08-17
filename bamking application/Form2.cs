@@ -46,9 +46,12 @@ namespace bamking_application
 
         }
 
-        //confirm
+        //confirm-withdraw
         private void button8_Click(object sender, EventArgs e)
         {
+            
+            String date = DateTime.Now.ToString();
+            String type = "withdraw on" + date;
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from accdetails where accnum='" + accno + "' and pin_num='" + textBox2.Text + "'",con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -68,6 +71,11 @@ namespace bamking_application
                     SqlCommand cmd2 = new SqlCommand("update accdetails set balance='"+updat_bal+"' where accnum='"+accno+"'",con);
                     cmd2.ExecuteNonQuery();
                     con.Close();
+                    con.Open();
+                    SqlCommand cmd3 = new SqlCommand("insert into transactions values('"+accno+"','"+null+"','"+type+"','"+withdraw+"' )",con);
+                    cmd3.ExecuteNonQuery();
+                    con.Close();
+
                     MessageBox.Show("amount debited successfully");
 
                 }
@@ -103,6 +111,10 @@ namespace bamking_application
         private void button1_Click(object sender, EventArgs e)
         {
             panel3.Visible = true;
+            panel6.Visible = false;
+            panel4.Visible = false;
+            panel8.Visible = false;
+            panel12.Visible = false;
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from accdetails where accnum='"+accno+"'",con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -124,8 +136,10 @@ namespace bamking_application
         private void button2_Click(object sender, EventArgs e)
         {
             panel6.Visible = false;
+            panel8.Visible = false;
             panel4.Visible = true;
             panel3.Visible = false;
+            panel12.Visible = false;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -137,9 +151,11 @@ namespace bamking_application
         //deposit
         private void button3_Click(object sender, EventArgs e)
         {
+            panel12.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
             panel6.Visible = true;
+            panel8.Visible = false;
         }
 
 
@@ -190,6 +206,8 @@ namespace bamking_application
         //confirm_deposit
         private void button10_Click(object sender, EventArgs e)
         {
+            String date = DateTime.Now.ToString();
+            String type = "deposited on" + date;
             int aa = int.Parse(textBox7.Text);
             int bb = int.Parse(textBox8.Text);
             int cc = int.Parse(textBox9.Text);
@@ -209,6 +227,10 @@ namespace bamking_application
                     SqlCommand cmd1 = new SqlCommand("update accdetails set balance='"+upbal+"' where accnum='"+accno+"'",con);
                     cmd1.ExecuteNonQuery();
                     MessageBox.Show("Amount deposited successfully");
+                    con.Close();
+                    con.Open();
+                    SqlCommand cmd2 = new SqlCommand("insert into transactions values('"+accno+"','"+null+"','"+type+"','"+deposit+"')",con);
+                    cmd2.ExecuteNonQuery();
                     con.Close();
 
                 }
@@ -291,6 +313,7 @@ namespace bamking_application
 
         private void button4_Click(object sender, EventArgs e)
         {
+            panel12.Visible = false;
             panel8.Visible = true;
             panel6.Visible = false;
             panel4.Visible = false;
@@ -371,6 +394,32 @@ namespace bamking_application
                     MessageBox.Show("insufficient balance");
                 }
             }
+        }
+        //mini_statement
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+            panel8.Visible = false;
+            panel6.Visible = false;
+            panel4.Visible = false;
+            panel3.Visible = false;
+            panel12.Visible = true;
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand(" select * from transactions where from_acc='"+accno+"'",con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+            con.Close();
+        }
+        //change_pass
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3(accno);
+            form3.Show();
+            this.Hide();
+
         }
     }
 }

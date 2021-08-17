@@ -9,3 +9,4 @@ C:\Users\Administrator\source\repos\bamking application\bamking application\obj\
 C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.exe
 C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking application.pdb
 C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking_application.Form2.resources
+C:\Users\Administrator\source\repos\bamking application\bamking application\obj\Debug\bamking_application.Form3.resources

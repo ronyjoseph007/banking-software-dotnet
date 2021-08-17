@@ -39,6 +39,28 @@ namespace bamking_application
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -68,40 +90,22 @@ namespace bamking_application
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button15 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,17 +113,18 @@ namespace bamking_application
             this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-5, -3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1160, 92);
+            this.panel1.Size = new System.Drawing.Size(1169, 96);
             this.panel1.TabIndex = 0;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(1072, 36);
+            this.linkLabel1.Location = new System.Drawing.Point(1045, 36);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(65, 20);
             this.linkLabel1.TabIndex = 1;
@@ -206,6 +211,7 @@ namespace bamking_application
             this.button5.TabIndex = 5;
             this.button5.Text = "Mini Statement";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -219,18 +225,264 @@ namespace bamking_application
             this.button6.TabIndex = 6;
             this.button6.Text = "Change Password";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(17, 222);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Location = new System.Drawing.Point(34, 210);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1098, 600);
+            this.panel2.Size = new System.Drawing.Size(1098, 596);
             this.panel2.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button13);
+            this.panel8.Controls.Add(this.button12);
+            this.panel8.Controls.Add(this.button11);
+            this.panel8.Controls.Add(this.panel11);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Location = new System.Drawing.Point(18, 23);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1058, 562);
+            this.panel8.TabIndex = 4;
+            this.panel8.Visible = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button13.Location = new System.Drawing.Point(803, 62);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(138, 35);
+            this.button13.TabIndex = 4;
+            this.button13.Text = "Transfer Fund";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button12.Location = new System.Drawing.Point(430, 62);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(172, 35);
+            this.button12.TabIndex = 3;
+            this.button12.Text = "View Benificiary";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.Location = new System.Drawing.Point(100, 62);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(138, 35);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Add Benificiary";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.comboBox1);
+            this.panel11.Controls.Add(this.button15);
+            this.panel11.Controls.Add(this.textBox15);
+            this.panel11.Controls.Add(this.textBox14);
+            this.panel11.Controls.Add(this.label18);
+            this.panel11.Controls.Add(this.label17);
+            this.panel11.Controls.Add(this.label16);
+            this.panel11.Location = new System.Drawing.Point(714, 128);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(317, 315);
+            this.panel11.TabIndex = 1;
+            this.panel11.Visible = false;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(141, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(155, 21);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button15.Location = new System.Drawing.Point(215, 212);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(84, 35);
+            this.button15.TabIndex = 6;
+            this.button15.Text = "Confirm";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(141, 138);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(158, 20);
+            this.textBox15.TabIndex = 7;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(141, 87);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(158, 20);
+            this.textBox14.TabIndex = 6;
+            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label18.Location = new System.Drawing.Point(68, 141);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(62, 17);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Amount";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label17.Location = new System.Drawing.Point(81, 91);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 17);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Name";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label16.Location = new System.Drawing.Point(3, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 17);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Account Number";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.dataGridView1);
+            this.panel10.Location = new System.Drawing.Point(379, 128);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(292, 315);
+            this.panel10.TabIndex = 0;
+            this.panel10.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 258);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.button14);
+            this.panel9.Controls.Add(this.textBox12);
+            this.panel9.Controls.Add(this.textBox11);
+            this.panel9.Controls.Add(this.textBox10);
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.label15);
+            this.panel9.Location = new System.Drawing.Point(22, 125);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(321, 315);
+            this.panel9.TabIndex = 0;
+            this.panel9.Visible = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button14.Location = new System.Drawing.Point(189, 215);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(84, 35);
+            this.button14.TabIndex = 5;
+            this.button14.Text = "Add";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(155, 151);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(154, 20);
+            this.textBox12.TabIndex = 4;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(155, 94);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(154, 20);
+            this.textBox11.TabIndex = 3;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(155, 41);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(154, 20);
+            this.textBox10.TabIndex = 2;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label14.Location = new System.Drawing.Point(84, 97);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 17);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label13.Location = new System.Drawing.Point(6, 44);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(127, 17);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Account Number";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label15.Location = new System.Drawing.Point(17, 148);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(128, 23);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Phone  Number";
             // 
             // panel6
             // 
@@ -238,7 +490,7 @@ namespace bamking_application
             this.panel6.Controls.Add(this.button9);
             this.panel6.Controls.Add(this.textBox3);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(21, 23);
+            this.panel6.Location = new System.Drawing.Point(18, 26);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1058, 559);
             this.panel6.TabIndex = 3;
@@ -259,7 +511,7 @@ namespace bamking_application
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(161, 125);
+            this.panel7.Location = new System.Drawing.Point(111, 129);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(791, 341);
             this.panel7.TabIndex = 3;
@@ -425,7 +677,7 @@ namespace bamking_application
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(21, 23);
+            this.panel4.Location = new System.Drawing.Point(18, 26);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1058, 559);
             this.panel4.TabIndex = 2;
@@ -450,7 +702,7 @@ namespace bamking_application
             this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(19, 138);
+            this.panel5.Location = new System.Drawing.Point(28, 157);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(994, 153);
             this.panel5.TabIndex = 3;
@@ -514,7 +766,7 @@ namespace bamking_application
             // 
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(21, 23);
+            this.panel3.Location = new System.Drawing.Point(18, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1058, 119);
             this.panel3.TabIndex = 4;
@@ -543,256 +795,31 @@ namespace bamking_application
             this.label2.Text = "Balance";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel8
+            // panel12
             // 
-            this.panel8.Controls.Add(this.button13);
-            this.panel8.Controls.Add(this.button12);
-            this.panel8.Controls.Add(this.button11);
-            this.panel8.Controls.Add(this.panel11);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(21, 20);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1058, 562);
-            this.panel8.TabIndex = 4;
-            this.panel8.Visible = false;
+            this.panel12.Controls.Add(this.dataGridView2);
+            this.panel12.Location = new System.Drawing.Point(18, 23);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1058, 564);
+            this.panel12.TabIndex = 5;
+            this.panel12.Visible = false;
             // 
-            // panel9
+            // dataGridView2
             // 
-            this.panel9.Controls.Add(this.button14);
-            this.panel9.Controls.Add(this.textBox12);
-            this.panel9.Controls.Add(this.textBox11);
-            this.panel9.Controls.Add(this.textBox10);
-            this.panel9.Controls.Add(this.label14);
-            this.panel9.Controls.Add(this.label13);
-            this.panel9.Controls.Add(this.label15);
-            this.panel9.Location = new System.Drawing.Point(22, 125);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(321, 315);
-            this.panel9.TabIndex = 0;
-            this.panel9.Visible = false;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.dataGridView1);
-            this.panel10.Location = new System.Drawing.Point(379, 128);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(292, 315);
-            this.panel10.TabIndex = 0;
-            this.panel10.Visible = false;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.comboBox1);
-            this.panel11.Controls.Add(this.button15);
-            this.panel11.Controls.Add(this.textBox15);
-            this.panel11.Controls.Add(this.textBox14);
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Controls.Add(this.label17);
-            this.panel11.Controls.Add(this.label16);
-            this.panel11.Location = new System.Drawing.Point(714, 128);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(317, 315);
-            this.panel11.TabIndex = 1;
-            this.panel11.Visible = false;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(100, 62);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(138, 35);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Add Benificiary";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(430, 62);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(172, 35);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "View Benificiary";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(803, 62);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(138, 35);
-            this.button13.TabIndex = 4;
-            this.button13.Text = "Transfer Fund";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label13.Location = new System.Drawing.Point(6, 44);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(127, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Account Number";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label14.Location = new System.Drawing.Point(84, 97);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 17);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Name";
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label15.Location = new System.Drawing.Point(17, 148);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(128, 23);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Phone  Number";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label16.Location = new System.Drawing.Point(3, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(127, 17);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Account Number";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label17.Location = new System.Drawing.Point(81, 91);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 17);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Name";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label18.Location = new System.Drawing.Point(68, 141);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 17);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Amount";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(155, 41);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(154, 20);
-            this.textBox10.TabIndex = 2;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(155, 94);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(154, 20);
-            this.textBox11.TabIndex = 3;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(155, 151);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(154, 20);
-            this.textBox12.TabIndex = 4;
-            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(141, 87);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(158, 20);
-            this.textBox14.TabIndex = 6;
-            this.textBox14.TextChanged += new System.EventHandler(this.textBox14_TextChanged);
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(141, 138);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(158, 20);
-            this.textBox15.TabIndex = 7;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(189, 215);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(84, 35);
-            this.button14.TabIndex = 5;
-            this.button14.Text = "Add";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 258);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button15.Location = new System.Drawing.Point(215, 212);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(84, 35);
-            this.button15.TabIndex = 6;
-            this.button15.Text = "Confirm";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(141, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 8;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.Color.DeepSkyBlue;
+            this.dataGridView2.Location = new System.Drawing.Point(75, 37);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(898, 465);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1155, 834);
+            this.ClientSize = new System.Drawing.Size(1139, 807);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -807,6 +834,13 @@ namespace bamking_application
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -817,13 +851,8 @@ namespace bamking_application
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -891,5 +920,7 @@ namespace bamking_application
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
